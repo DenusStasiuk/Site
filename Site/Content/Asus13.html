@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Asus VivoBook 13</title>
+    <link href="/Content/CSS/styles.css" rel="stylesheet" type="text/css"/>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="/Content/JS/scrypts.js"></script>
+</head>
+    
+<body>
+<div id="wrapper">
+    <div id="header"><img src="/Content/images/Header.jpg"/></div>
+    <div id="content">
+        <div id="nav" >
+            <ul>
+                <li><a href="/Content/index.html"><img alt="Изображение" src="/Content/images/Logo.jpg"/></a></li>
+                <li><a href="/Content/Asus15.html">Asus VivoBook 15</a></li>
+                <li><a href="/Content/Asus17.html">Asus VivoBook 17</a></li>
+                <li><a href="/Content/Asus13.html">Asus VivoBook 13</a></li>
+            </ul>
+        </div>
+        <div id="main">
+          <table border="1px solid black">
+              <tr>
+                <td id="main_title" colspan="3"><h1>Asus VivoBook 13</h1></td>
+              </tr>
+              <tr class="big_pic">
+                <td colspan="3"><img id="Preview" src="/Content/images/Asus13.jpg"/></td>
+              </tr>
+        </table>
+        </div>
+        <div class="form_block big_card">
+                  <img alt="Изображение" src="/Content/images/Form.jpg"/>
+                        <form action="Home/Lid" method="POST">
+                            <fieldset>
+                                <legend>Оформление заказа</legend>
+                                <input type="text" placeholder="Введите ваше имя" required/><br/>
+                                 <!--Тут ошибка-->
+                                <input type="tel" placeholder="Введите номер телефона в формате 8-ххх-ххх-хххх" required patern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br/>
+                                <!--Тут ошибка-->
+                                <select required>
+                                    <option value="Asus15" >Asus VivoBook 15</option>
+                                    <option value="Asus17">Asus VivoBook 17</option>
+                                    <option value="Asus13">Asus VivoBook 13</option>
+                                </select><br/>
+                                <input type="submit"/>
+                            </fieldset>
+                      </form>
+   </div>
+    </div>
+    <div id="footer">Copyrite</div>
+</div>
+</body>
+</html>
