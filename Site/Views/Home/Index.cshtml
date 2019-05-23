@@ -27,78 +27,55 @@
                 </ul>
             </div>
             <div id="main">
-                <table>
-                    <tr>
-                        <td id="main_title" colspan="3"><h1>Главная</h1></td>
-                    </tr>
-                    <tr>
-                        <td class="small_card">
-                            <img alt="Изображение" src="/Content/images/Asus15.jpg" />
-                            <div class="content">
-                                <small>Laptop</small>
-                                <h2>ASUS</h2>
-                                <p>Asus VivoBook 15</p>
-                                <a href="/Content/Asus15.html">Перейти</a>
-                            </div>
-                        </td>
+                <nav class="Items">
+                    <ul>
+                        <table>
+                            <tr>
+                                <td id="main_title" colspan="3"><h1>Главная</h1></td>
+                            </tr>
+                            <tr>
+                                @foreach (var Item in Model)
+                                {
+                                    <td class="small_card">
+                                        <img alt="Изображение" src="@Item.Preview" />
+                                        <div class="content">
+                                            <small>@Item.Type</small>
+                                            <h2>ASUS</h2>
+                                            <p>@Item.Title</p>
+                                            <a href="~/Content/Asus15">Перейти</a>
+                                        </div>
+                                    </td>
+                                }
 
-                        <td class="small_card">
-                            <img alt="Изображение" src="/Content/images/Asus17.jpg" />
-                            <div class="content">
-                                <small>LapTop</small>
-                                <h2>Asus</h2>
-                                <p>Asus VivoBook 17</p>
-                                <a href="/Content/Asus17.html">Перейти</a>
-                            </div>
-                        </td>
 
-                        <td class="small_card">
-                            <img alt="Изображение" src="/Content/images/Asus13.jpg" />
-                            <div class="content">
-                                <small>Laptop</small>
-                                <h2>Asus</h2>
-                                <p>Asus VivoBook 13</p>
-                                <a href="/Content/Asus13.html">Перейти</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="big_card" colspan="3">
-                            <img alt="Изображение" src="/Content/images/Form.jpg" />
-                            <form onsubmit="return false" action="Home/Lid" method="POST">
-                                <fieldset>
-                                    <legend>Оформление заказа</legend>
-                                    <input type="text" name="Name" placeholder="Введите ваше имя" required /><br />
-                                    <!--Тут ошибка-->
-                                    <input type="tel" name="Tel" placeholder="Введите номер телефона в формате 8-ххх-ххх-хххх" required patern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}" /><br />
-                                    <!--Тут ошибка-->
-                                    <select name="Car" required>
-                                        <option value="Asus15">Asus VivoBook 15</option>
-                                        <option value="Asus17">Asus VivoBook 17</option>
-                                        <option value="Asus13">Asus VivoBook 13</option>
-                                    </select><br />
-                                    <input type="submit" />
-                                </fieldset>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
+
+
+                            <tr>
+                                <td class="big_card" colspan="3">
+                                    <img alt="Изображение" src="/Content/images/Form.jpg" />
+                                    <form onsubmit="return false" action="Home/Lid" method="POST">
+                                        <fieldset>
+                                            <legend>Оформление заказа</legend>
+                                            <input type="text" name="Name" placeholder="Введите ваше имя" required /><br />
+                                            <!--Тут ошибка-->
+                                            <input type="tel" name="Tel" placeholder="Введите номер телефона в формате 8-ххх-ххх-хххх" required patern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}" /><br />
+                                            <!--Тут ошибка-->
+                                            <select name="Car" required>
+                                                <option value="Asus15">Asus VivoBook 15</option>
+                                                <option value="Asus17">Asus VivoBook 17</option>
+                                                <option value="Asus13">Asus VivoBook 13</option>
+                                            </select><br />
+                                            <input type="submit" />
+                                        </fieldset>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </ul>
+                </nav>
             </div>
         </div>
         <div id="footer">Copyrite</div>
-    </div>
-    <div>
-        <nav class="Offers">
-            <ul>
-                @foreach (var Item in Model)
-                {
-                        <h1>@Item.Title</h1>
-                        <p>@Item.Description</p>
-                        <p>Price: @Item.Price</p>
-                        <p>Numbers: @Item.Numbers</p>
-                }
-            </ul>
-        </nav>
     </div>
 </body>
 </html>

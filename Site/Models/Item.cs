@@ -21,5 +21,6 @@ namespace Site.Models
         public string Preview { get; set; }
         public Nullable<int> Numbers { get; set; }
         public Nullable<int> Price { get; set; }
+        public string ItemPage { get; set; }
     }
 }

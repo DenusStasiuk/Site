@@ -15,5 +15,12 @@ namespace Site.Controllers
             var Items = db.Items;
             return View(Items);
         }
+
+        //GET: Home
+        public ActionResult Asus15()
+        {
+            var Item = db.Items.Include("Asus15");
+            return View(Item);
+        }
     }
 }
