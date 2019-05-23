@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Site.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,25 +17,27 @@ namespace Site.Controllers
             return View(Items);
         }
 
-        //GET: Home
+        // GET: Home
         public ActionResult Asus1()
         {
             var Item = db.Items.Where(i=>i.Title.Contains("15"));
             return View(Item);
         }
 
-        //GET: Home
+        // GET: Home
         public ActionResult Asus2()
         {
             var Item = db.Items.Where(i => i.Title.Contains("17"));
             return View(Item);
         }
 
-        //GET: Home
+        // GET: Home
         public ActionResult Asus3()
         {
             var Item = db.Items.Where(i => i.Title.Contains("13"));
             return View(Item);
         }
+
+      
     }
 }

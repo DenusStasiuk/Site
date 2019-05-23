@@ -25,9 +25,9 @@
                         <div id="nav">
                             <ul>
                                 <li><a href="@Url.Action("Index","Home")"><img alt="Изображение" src="~/Content/images/Logo.jpg" /></a></li>
-                                <li><a href="@Url.Action("Asus0","Home")">Asus VivoBook 15</a></li>
-                                <li><a href="@Url.Action("Asus1","Home")">Asus VivoBook 17</a></li>
-                                <li><a href="@Url.Action("Asus0","Home")">Asus VivoBook 13</a></li>
+                                <li><a href="@Url.Action("Asus1","Home")">Asus VivoBook 15</a></li>
+                                <li><a href="@Url.Action("Asus2","Home")">Asus VivoBook 17</a></li>
+                                <li><a href="@Url.Action("Asus3","Home")">Asus VivoBook 13</a></li>
                             </ul>
                         </div>
                         <div id="main">
@@ -43,9 +43,15 @@
 
 
                             </table>
-                            <p style="scrollbar-arrow-color">Abount: @Item.Description</p>
-                            <p style="scrollbar-arrow-color">Price: @Item.Price</p>
-                            <p style="scrollbar-arrow-color">At stock: @Item.Numbers</p>
+                            <table>
+                                <tr>
+                                    <td id="main_title" colspan="3">
+                                        <p>About: @Item.Description</p>
+                                        <p>Price: @Item.Price</p>
+                                        <p>At stock: @Item.Numbers</p>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
 
                         <div class="form_block big_card">

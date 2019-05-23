@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Laptops</title>
+    <link href="/Content/CSS/styles.css" rel="stylesheet" type="text/css" />
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="~/Content/JS/scrypts.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img alt="Изображение" src="/Content/images/Header.jpg" />
+        </div>
+        <div id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")"><img alt="Изображение" src="/Content/images/Logo.jpg" /></a></li>
+                    <li><a href="@Url.Action("Asus1","Home")">Asus VivoBook 15</a></li>
+                    <li><a href="@Url.Action("Asus2","Home")">Asus VivoBook 17</a></li>
+                    <li><a href="@Url.Action("Asus3","Home")">Asus VivoBook 13</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <table>
+                    <tr>
+                        <td id="main_title" colspan="3">
+                            <p>Підтвердження покупки</p>
+                            <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount&state=%2Fhome">PayPal</a><br />
+                            <a href="https://www.liqpay.ua/uk/authorization">LiqPay</a><br />
+                        </td>
+                    </tr>
+                </table>
+               
+            </div>
+        </div>
+        <div id="footer">Copyrite</div>
+    </div>
+</body>
+</html>
+
