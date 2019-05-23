@@ -20,10 +20,10 @@
         <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="/Content/index.html"><img alt="Изображение" src="/Content/images/Logo.jpg" /></a></li>
-                    <li><a href="/Content/Asus15.html">Asus VivoBook 15</a></li>
-                    <li><a href="/Content/Asus17.html">Asus VivoBook 17</a></li>
-                    <li><a href="/Content/Asus13.html">Asus VivoBook 13</a></li>
+                    <li><a href="@Url.Action("Index","Home")"><img alt="Изображение" src="/Content/images/Logo.jpg" /></a></li>
+                    <li><a href="@Url.Action("Asus1","Home")">Asus VivoBook 15</a></li>
+                    <li><a href="@Url.Action("Asus2","Home")">Asus VivoBook 17</a></li>
+                    <li><a href="@Url.Action("Asus3","Home")">Asus VivoBook 13</a></li>
                 </ul>
             </div>
             <div id="main">
@@ -42,7 +42,7 @@
                                             <small>@Item.Type</small>
                                             <h2>ASUS</h2>
                                             <p>@Item.Title</p>
-                                            <a href="~/Content/Asus15">Перейти</a>
+                                            <a href="@Url.Action("Asus"+@Item.Id, "Home")">Перейти</a>
                                         </div>
                                     </td>
                                 }
@@ -55,10 +55,10 @@
                                     <img alt="Изображение" src="/Content/images/Form.jpg" />
                                     <form onsubmit="return false" action="Home/Lid" method="POST">
                                         <fieldset>
-                                            <legend>Оформление заказа</legend>
-                                            <input type="text" name="Name" placeholder="Введите ваше имя" required /><br />
+                                            <legend>Оформлення замовлення</legend>
+                                            <input type="text" name="Name" placeholder="Введіть ваше ім'я" required /><br />
                                             <!--Тут ошибка-->
-                                            <input type="tel" name="Tel" placeholder="Введите номер телефона в формате 8-ххх-ххх-хххх" required patern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}" /><br />
+                                            <input type="tel" name="Tel" placeholder="Введіть номер телефону в форматі 8-ххх-ххх-хххх" required patern="8-[0-9]{3}-[0-9]{3}-[0-9]{4}" /><br />
                                             <!--Тут ошибка-->
                                             <select name="Car" required>
                                                 <option value="Asus15">Asus VivoBook 15</option>

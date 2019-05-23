@@ -17,9 +17,23 @@ namespace Site.Controllers
         }
 
         //GET: Home
-        public ActionResult Asus15()
+        public ActionResult Asus1()
         {
-            var Item = db.Items.Include("Asus15");
+            var Item = db.Items.Where(i=>i.Title.Contains("15"));
+            return View(Item);
+        }
+
+        //GET: Home
+        public ActionResult Asus2()
+        {
+            var Item = db.Items.Where(i => i.Title.Contains("17"));
+            return View(Item);
+        }
+
+        //GET: Home
+        public ActionResult Asus3()
+        {
+            var Item = db.Items.Where(i => i.Title.Contains("13"));
             return View(Item);
         }
     }
