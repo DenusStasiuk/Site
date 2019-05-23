@@ -87,7 +87,19 @@
         </div>
         <div id="footer">Copyrite</div>
     </div>
-    
+    <div>
+        <nav class="Offers">
+            <ul>
+                @foreach (var Item in Model)
+                {
+                        <h1>@Item.Title</h1>
+                        <p>@Item.Description</p>
+                        <p>Price: @Item.Price</p>
+                        <p>Numbers: @Item.Numbers</p>
+                }
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
 
