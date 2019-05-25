@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Site.Models.Order>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Laptops</title>
+    <link href="/Content/CSS/styles.css" rel="stylesheet" type="text/css" />
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="~/Content/JS/scrypts.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img alt="Изображение" src="/Content/images/Header.jpg" />
+        </div>
+        <div id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")"><img alt="Изображение" src="/Content/images/Logo.jpg" /></a></li>
+                    <li><a href="@Url.Action("Asus1","Home")">Asus VivoBook 15</a></li>
+                    <li><a href="@Url.Action("Asus2","Home")">Asus VivoBook 17</a></li>
+                    <li><a href="@Url.Action("Asus3","Home")">Asus VivoBook 13</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <nav class="Items">
+                    <ul>
+                        <table>
+                            <tr>
+                                <td id="main_title" colspan="3"><h1>Главная</h1></td>
+                            </tr>
+                            <tr>
+                                @foreach (var Order in Model)
+                                {
+                                    <td class="small_card">
+                                        <div class="content">
+                                            <p>ID: @Order.Id</p>
+                                            <p>ItemID: @Order.ItemID</p>
+                                            <p>User name: @Order.UserName</p>
+                                            <p>User tel: @Order.UserTel</p>
+                                        </div>
+                                    </td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="big_card" colspan="3">
+                                    <form action="/Admin/AddItem" method="post">
+                                        <input type="text" name="Title" placeholder="Title" /><br />
+                                        <input type="text" name="Type" placeholder="Type" /><br />
+                                        <input type="text" name="Description" placeholder="Description" /><br />
+                                        <input type="text" name="Preview" placeholder="Preview" /><br />
+                                        <input type="text" name="Number" placeholder="Number" /><br />
+                                        <input type="text" name="Price" placeholder="Price" /><br />
+                                        <input type="submit" />
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="footer">Copyrite</div>
+        <a href="@Url.Action("AceptOrder","Order")">Go to order</a>
+    </div>
+</body>
+</html>
+

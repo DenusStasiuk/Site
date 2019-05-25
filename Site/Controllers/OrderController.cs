@@ -10,12 +10,6 @@ namespace Site.Controllers
     public class OrderController : Controller
     {
         // GET: Order
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: Order
         private Models.ShopDBEntities db = new Models.ShopDBEntities();
         public ActionResult AceptOrder()
         {

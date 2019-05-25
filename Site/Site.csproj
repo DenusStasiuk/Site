@@ -130,6 +130,7 @@
     <Content Include="Content\index.html" />
     <Content Include="Content\JS\jquery-1.11.0.min.js" />
     <Content Include="Content\JS\scrypts.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\ShopDBModel.Context.tt">
@@ -153,6 +154,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,6 +202,9 @@
     <Content Include="Views\Home\Asus2.cshtml" />
     <Content Include="Views\Home\Asus3.cshtml" />
     <Content Include="Views\Order\AceptOrder.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Admin\AdminPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
